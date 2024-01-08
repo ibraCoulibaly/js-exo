@@ -11,14 +11,23 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe"; // declaration d'une variable nommée name et qui prend comme valeur une chaine de caractère "Joe" 
+        var city = 'London'; // declaration d'une variable nommée city et qui prend comme valeur une chaine de caractère 'London' 
+        var age = 32; // declaration d'une variable nommée age et qui prend comme valeur un entier 32
+        var isRed = true; // declaration d'une variable nommée isRed et qui prend comme valeur un booleen TRUE
+        var isOld = age > 80; // declaration d'une variable nommée isOld et qui prend comme valeur age supérieur à 80
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // déclaration d'un tableau dse chaine de caractère nommée previousJobs 
+	
+	/*
+	Une fonction qui prend en paramettre 2 entiers height et weight
+	Et verifie si height est supérieur à 180 alors affiche dans la console : Vous êtes grand
 
+	Verifie si weight est inferieur à 0 alors affiche : oups, there is a problem
+	Sinon  si weight est inferieur à 15 alors affiche : Are you that slim ?
+	Sinon afficher : Good !
+
+	*/
         function info(height, weight) {
             if (height > 180) {
                 console.log('Vous êtes grand');
@@ -32,20 +41,23 @@
             }
         }
 
-        info(165, 45);
+        info(165, 45); //appel de la fonction info qui prend comme argument 165 et 45 -> affiche : Good !
 
-        var myHeight = 175;
-        var myWeight = 86;
+        var myHeight = 175; // declaration d'une variable nommée myHeight et qui prend comme valeur un entier 175
+        var myWeight = 86; // declaration d'une variable nommée myWeight et qui prend comme valeur un entier 86
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight); //appel de la fonction info qui prend comme argument myHeight et myWeight -> affiche : Good !
 
-        info(myHeight + 15, myWeight - 100);
-
+        info(myHeight + 15, myWeight - 100); //appel de la fonction info qui prend comme argument myHeight + 15 et myWeight -100 -> affiche : Vous êtes grand et oups, there is a problem
+	
+	/*
+	Une fonction toUpper qui prend un paramètre une chaine de caractère nommé variable et retourne la chaine en majuscule 
+	*/
         function toUpper(variable) {
             return variable.toUpperCase();
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name); // déclaration d'une variable nommée upperName qui prend comme valeur le resultat de la fonction toUpper avec un argument nommé name
 
         for (i = 0; i < 3; i = i + 1) {
             console.log(previousJobs[i]);
