@@ -1,16 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+    <h1>Exercice 7</h1>
     <div class="container">
-						<h1>Exercice 7</h1>
-				</div>
+      <div class="container1">
+        
+        <h3>Liste des articles</h3>
+        <ul>
+          <li id="list0"></li>
+          <li id="list1"></li>
+          <li id="list2"></li>
+          <li id="list3"></li>
+          <li id="list4"></li>
+          <li id="list5"></li>
+          <li id="list6"></li>
+          <li id="list7"></li>
+          <li id="list8"></li>
+        </ul>
+
+        <div class="clible">
+          <button onclick="afficher()">Click</button>
+          <input id="mot" type="text" />
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container2">
+        <h3>Verifier les articles en stock</h3>
+        <ul>
+          <li id="stock0"></li>
+          <li id="stock1"></li>
+          <li id="stock2"></li>
+          <li id="stock3"></li>
+          <li id="stock4"></li>
+          <li id="stock5"></li>
+          <li id="stock6"></li>
+          <li id="stock7"></li>
+          <li id="stock8"></li>
+        </ul>
+        <input type="checkbox" id="check" onclick="enStock()">
+      </div>
+
+      <div class="container3">
+        <h3>Trier par "DESC" ou "ASC"</h3>
+        <ul>
+          <li id="tri0"></li>
+          <li id="tri1"></li>
+          <li id="tri2"></li>
+          <li id="tri3"></li>
+          <li id="tri4"></li>
+          <li id="tri5"></li>
+          <li id="tri6"></li>
+          <li id="tri7"></li>
+          <li id="tri8"></li>
+        </ul>
+        <button onclick="triAsc()">ASC</button>
+        <button onclick="triDesc()">DESC</button>
+      </div>
+    </div>
+
     <script src="datas.js"></script>
     <script src="exo7.js"></script>
   </body>
-
 </html>
