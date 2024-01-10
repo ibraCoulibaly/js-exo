@@ -1,17 +1,16 @@
 // you can write js here
 
 
-jouerPerso = ''
-function getPlayerChoice(playerInput){
-    playerInput = prompt("Your choice ( rock, paper, scissors) ?")
-    if(playerInput == "rock" || playerInput == "paper"  || playerInput == "scissors"){
-        jouerPerso = playerInput.toLowerCase()
-    }else{
-        jouerPerso = 'erreur'
-    }
-    return jouerPerso
-}
 
+let valTaper = prompt("Entrr une valeur : ").toLowerCase()
+
+
+function getPlayerChoice(playereInput){
+
+    if(playereInput === "rock" || playereInput === "paper" || playereInput === "scissors"){
+        return playereInput
+    }
+}
 
 
 jouerOrdi = ''
@@ -28,7 +27,7 @@ function getComputerChoice(){
 }
 
 function findWinner(playerChoice, computerChoice){
-    playerChoice = getPlayerChoice()
+    playerChoice = getPlayerChoice(valTaper)
     computerChoice = getComputerChoice()
     console.log("Le choix de l'utilisateur : " + playerChoice)
     console.log("Le choix de l'ordi : " + computerChoice)
@@ -38,9 +37,11 @@ function findWinner(playerChoice, computerChoice){
     }else if(((playerChoice == "rock" && computerChoice == "scissors") || (playerChoice == "paper" && computerChoice === "rock") || (playerChoice === "scissors") && (computerChoice === "paper"))){
         console.log("Resultat : Won")
      
-    }else{
-        console.log("Resultat : Lost")
+    }else if(playerChoice != "rock" || playerChoice != "paper" || playerChoice != "scissors"){
+        console.log("ERREUR")
 
+    }else{
+        console.log("Resultat won")
     }
 }
 
