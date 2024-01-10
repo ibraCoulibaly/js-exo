@@ -46,7 +46,17 @@ allArticle()
 //Affichage du contenu input
 function afficher(){
     let input = document.getElementById("mot").value
-    document.querySelector('p').textContent = input
+    for(let i = 0; i < jsonDatas.length; i++){
+        if(input == jsonDatas[i].type ){
+            document.getElementById("p1").textContent = input
+            break
+        }else{
+             let val = "L'article n'existe pas. Sorry!!!"
+             document.getElementById("p1").textContent = val
+         }
+    }
+    
+    
 }
 //Verification de stock
 function enStock(){
@@ -97,13 +107,16 @@ function triDesc(){
 
 //Ajout de formulaire
 
+function ajoutArticle(){
+    let newArticle = document.getElementById("new").value
+    document.querySelector('p').textContent = newArticle
+    
+}
+
+let e = document.querySelector(".container4")
 
 
 console.log("exo-7");
-console.log(jsonDatas);
+console.log(document.getElementById("new").value);
 
-let ttt = 'a' + 2
-console.log(ttt)
-console.log(ttt + ttt)
-console.log(ttt + `${ttt}`)
 

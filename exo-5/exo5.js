@@ -4,9 +4,6 @@ let input = 'gdjef lbrjbvqfjb ivnrknvqk qjbvjrbjjnv edc'
 let vowels = ['a', 'e', 'i', 'u', 'o', 'y']
 let resultArray = []
 
-
-
-
 // With indexOf
 // for(let j = 0; j < input.length; j++){
 //     if(vowels.indexOf(input[j]) > 0){

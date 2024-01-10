@@ -24,9 +24,9 @@
         </ul>
 
         <div class="clible">
-          <button onclick="afficher()">Click</button>
+          <button onclick="afficher()">Recherche</button>
           <input id="mot" type="text" />
-          <p></p>
+          <p id="p1"></p>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
       </div>
 
       <div class="container3">
-        <h3>Trier par "DESC" ou "ASC"</h3>
+        <h3>Trier Ascendant ou Descendant</h3>
         <ul>
           <li id="tri0"></li>
           <li id="tri1"></li>
@@ -63,10 +63,20 @@
         <button id="desc" onclick="triDesc()">Descendant</button>
       </div>
 
+      <div class="container4">
+        <h3>Ajouter un article</h3>
+        <form action="">
+          <div>
+            <label>Article&nbsp;:</label>
+            <input id="new" type="text" />
+            <button id="btnAjout" onclick="ajoutArticle()">Ajouter</button>
+            <p></p>
+          </div>
+        </form>
+      </div>
+
+
     </div>
-
-    
-
     <script src="datas.js"></script>
     <script src="exo7.js"></script>
   </body>
