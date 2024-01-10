@@ -33,19 +33,7 @@ for(let i = 0; i < jsonDatas.length; i++){
     }
 }
 
-////////////////////////////
 
-// const list1 = document.getElementById("list1")
-// const list2 = document.getElementById("list2")
-// const list3 = document.getElementById("list3")
-// const list4 = document.getElementById("list4")
-// const list5 = document.getElementById("list5")
-// const list6 = document.getElementById("list6")
-// const list7 = document.getElementById("list7")
-// const list8 = document.getElementById("list8")
-// const list9 = document.getElementById("list9")
-
-//list1.textContent = jsonDatas[0].type
 
 //Affiche 
 function allArticle(){
@@ -75,30 +63,47 @@ function enStock(){
     }
 }
 
-//Tri
-let result = []
+//Tri asc and desc 
+
+
+
 function triAsc(){
+    let result = [] //une table qui va contenir le nom des articles trié
+    let tab = []// va contenier le nom des articles
+    for(let i = 0; i < jsonDatas.length; i++){
+        tab.push(jsonDatas[i].name) //envoi tous les nom d'article dans la table tab
+    }
+    result = tab.sort()//tri
+    /* je parcours mon resultat et je recupere chaque id de ma liste "li" en concatenant  
+        avec l'indice j pour correspond à : trij -> tri0, tri1...
+    */
+    for(let j = 0; j < result.length; j++){
+        document.getElementById("tri" + `${j}`).textContent = result[j] 
+    }
+}
+
+
+function triDesc(){
+    let result1 = []
     let tab = []
     for(let i = 0; i < jsonDatas.length; i++){
         tab.push(jsonDatas[i].name)
     }
-    result = tab.sort()
-    for(let j = 0; j < result.length; j++){
-        document.getElementById("tri" + `${j}`).textContent = result[j]
+    result1 = tab.sort().reverse()
+    for(let j = 0; j < result1.length; j++){
+        document.getElementById("tri" + `${j}`).textContent = result1[j]
     }
-    return result
 }
-let res = []
 
-function triDesc(){
-    let tab = []
-    tab = triAsc()
-    const triDesc = (a, b) => b-a
-    res = tab.sort(triDesc)
-    return res
-}
+//Ajout de formulaire
 
 
 
 console.log("exo-7");
 console.log(jsonDatas);
+
+let ttt = 'a' + 2
+console.log(ttt)
+console.log(ttt + ttt)
+console.log(ttt + `${ttt}`)
+
